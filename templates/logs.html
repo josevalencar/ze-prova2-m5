@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zé: Logs do Sistema</title>
+    <script src="https://unpkg.com/htmx.org@1.9.11"></script>
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" sizes="16x16 32x32 48x48">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='logs.css') }}">
+</head>
+<body>
+    <header>
+        <h2 class="navlist"> Logs do sistema</h2>
+    </header>
+    <div id="log-container">
+        <ul class="guarda-log" hx-get="/info" hx-trigger="load"></ul>
+    </div>
+    <div>
+        <a href="/">Voltar para página inicial</a>
+    </div>
+</body>
+</html>
